@@ -41,7 +41,6 @@ public class GoogleTest {
 
     @AfterEach
     public void tearDown(){
-        System.out.println("Exit");
         driver.quit();
     }
 }
