@@ -29,11 +29,12 @@ public class GoogleTest {
         WebElement searchbox = driver.findElement(By.name("q"));
 
         searchbox.clear();
+
         searchbox.sendKeys("HOLA");
 
         searchbox.submit();
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
 
         assertEquals("HOLA - Buscar con Google", driver.getTitle());
 
@@ -41,6 +42,6 @@ public class GoogleTest {
 
     @AfterEach
     public void tearDown(){
-        driver.quit();
+        //driver.quit();
     }
 }
